@@ -32,32 +32,11 @@ public class CaremarkDrugInformationIT extends AbstractTestIT {
 	private final static Logger logger = LoggerFactory.getLogger(CaremarkDrugInformationIT.class);
 
 	@Inject
-	private Browser browser;
-
-	@Inject
 	URI baseUrl;
 
 	@BeforeMethod
 	public void setup() {
-		ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-		Runnable task = () -> {
-			System.out.println("Scheduling task started");
-			// TimeUnit.SECONDS.sleep(2);
-			Element registerLink = null;
-			try {
-				registerLink = browser.findElement(PartialLinkText.REGISTER);
-			} catch (Exception e) {
-				System.out.println("registerlink not found ");
-			}
-			System.out.println("registerlink is null: " + (registerLink == null));
-			if (registerLink != null) {
-				System.out.println(
-						"Scheduling: " + System.nanoTime() + ", found Regsiter link: " + registerLink.getText());
-
-			}
-		};
-
-		executor.scheduleWithFixedDelay(task, 0, 1, TimeUnit.SECONDS);
+		
 
 	}
 
