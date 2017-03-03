@@ -2,16 +2,12 @@ package com.davidyuan.portal.druginformation;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
-
 import java.net.URI;
-
 import javax.inject.Inject;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.davidyuan.portal.AbstractTestIT;
 
 public class CaremarkDrugInformationIT extends AbstractTestIT {
