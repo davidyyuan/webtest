@@ -1,31 +1,18 @@
 package com.davidyuan.portal.druginformation;
 
-import static org.testng.AssertJUnit.assertTrue;
-import org.testng.annotations.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 
-import com.davidyuan.portal.AbstractTestIT;
-
-import org.testng.annotations.BeforeMethod;
 import java.net.URI;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestExecutionListeners;
-import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-//import swb.ch15pageflow.pages.BookstoreHomepage;
-import swb.framework.Browser;
-import swb.framework.BrowserConfig;
-import swb.framework.BrowserRunner;
-import swb.framework.Element;
-import swb.framework.ScreenshotTaker;
+import com.davidyuan.portal.AbstractTestIT;
 
 public class CaremarkDrugInformationIT extends AbstractTestIT {
 
@@ -57,9 +44,8 @@ public class CaremarkDrugInformationIT extends AbstractTestIT {
 		browser.setInputText(Name.SEARCHDRUG, "Lipitor");
 		logger.debug("Click button " + Xpath.SEARCH);
 		browser.click(Xpath.SEARCH);
-		assertTrue(browser.getPageSource().contains("Generic: Atorvastatin"));
-		assertTrue(browser.getPageSource()
-				.contains("ATORVASTATIN (a TORE va sta tin) is known as a HMG-CoA reductase inhibitor or 'statin'"));
+		assertThat(browser.getPageSource(), containsString("Generic: Atorvastatin"));
+		assertThat(browser.getPageSource(), containsString("ATORVASTATIN (a TORE va sta tin) is known as a HMG-CoA reductase inhibitor or 'statin'"));
 	}
 
 	@Test
@@ -72,7 +58,7 @@ public class CaremarkDrugInformationIT extends AbstractTestIT {
 		browser.setInputText(Name.SEARCHDRUG, "heart arrest");
 		browser.click(Xpath.SEARCH);
 		browser.click(PartialLinkText.HEART_ARREST);
-		assertTrue(browser.getPageSource().contains("Please select a drug from the list below to view details"));
+		assertThat(browser.getPageSource(), containsString("Please select a drug from the list below to view details"));
 
 	}
 }
