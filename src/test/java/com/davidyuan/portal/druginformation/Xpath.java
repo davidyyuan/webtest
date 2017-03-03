@@ -1,26 +1,25 @@
-package com.caremark.portal.druginformation;
+package com.davidyuan.portal.druginformation;
 
 import org.openqa.selenium.By;
 
 import java.util.function.Supplier;
 
-import static org.openqa.selenium.By.linkText;
+import static org.openqa.selenium.By.xpath;;
 
 /**
  * This enum is a Supplier of ByCssSelector from Selenium By API.
  */
-public enum LinkText implements Supplier<By> {
+public enum Xpath implements Supplier<By> {
 
-	Drug_Reference_Interactions("Drug Reference & Interactions"),
-    MEXICO("MEXICO"),
-    CANCUN("Cancun"),
+    SEARCH("//*[@id='searchForm']/div/button")
+
 
     ;
 
     private final By by;
 
-    LinkText(String id) {
-        this.by = linkText(id);
+    Xpath(String id) {
+        this.by = xpath(id);
     }
 
     /**

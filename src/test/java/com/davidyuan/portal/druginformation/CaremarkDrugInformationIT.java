@@ -1,9 +1,9 @@
-package com.caremark.portal.druginformation;
+package com.davidyuan.portal.druginformation;
 
 import static org.testng.AssertJUnit.assertTrue;
 import org.testng.annotations.Test;
 
-import com.caremark.portal.AbstractTestIT;
+import com.davidyuan.portal.AbstractTestIT;
 
 import org.testng.annotations.BeforeMethod;
 import java.net.URI;

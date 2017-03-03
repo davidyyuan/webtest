@@ -1,4 +1,4 @@
-package com.caremark.portal.druginformation;
+package com.davidyuan.portal.druginformation;
 
 import org.openqa.selenium.By;
 

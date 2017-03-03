@@ -1,4 +1,4 @@
-package com.caremark.portal;
+package com.davidyuan.portal;
 
 import org.openqa.selenium.By;
 
