@@ -8,7 +8,7 @@ import swb.framework.BrowserRunner;
 import javax.inject.Inject;
 
 @RunWith(BrowserRunner.class)
-public class BrowserConfigIT {
+public class BrowserConfigIT_sample {
 
     @Inject
     private Browser browser;

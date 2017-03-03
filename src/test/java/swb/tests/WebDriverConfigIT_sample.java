@@ -14,7 +14,7 @@ import java.net.URI;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(WebDriverRunner.class)
-public class WebDriverConfigIT {
+public class WebDriverConfigIT_sample {
 
     @Inject private DesiredCapabilities desiredCapabilities;
     @Inject

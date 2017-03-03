@@ -11,7 +11,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import static org.junit.Assert.assertEquals;
 
 @Ignore("requires safari driver installed")
-public class SafariPasswordIT {
+public class SafariPasswordIT_sample {
     private WebDriver driver = new SafariDriver();
 
     @After

@@ -20,7 +20,7 @@ import java.nio.file.Files;
 
 @Ignore
 @RunWith(WebDriverRunner.class)
-public class VisualTestingIT {
+public class VisualTestingIT_sample {
     @Inject
     private WebDriver driver;
 

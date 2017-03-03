@@ -7,7 +7,7 @@ import swb.framework.robust.Retry;
 
 import java.util.concurrent.TimeUnit;
 
-public class RetryTest {
+public class RetryTest_sample {
     @Rule
     public final ExpectedException expectedException = ExpectedException.none();
     private final Retry retry = new Retry(2, 1, TimeUnit.MILLISECONDS);

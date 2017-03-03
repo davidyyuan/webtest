@@ -13,7 +13,7 @@ import java.net.URI;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(WebDriverRunner.class)
-public class HttpsIT {
+public class HttpsIT_sample {
     @Inject
     private WebDriver driver;
     @Inject

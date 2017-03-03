@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.assertEquals;
 
 @Ignore("not longer in the book")
-public class GeolocationIT {
+public class GeolocationIT_sample {
 
     private final WebDriver driver = GeolocationConfigurableWebDriver
             .create(FirefoxDriver::new, GeolocationStatus.OK, 51.5106766, -0.1231314); // <1> Set the location.
