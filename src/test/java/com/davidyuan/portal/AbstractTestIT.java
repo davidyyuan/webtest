@@ -10,6 +10,6 @@ import swb.framework.ScreenshotTaker;
 
 @ContextConfiguration(classes = BrowserConfig.class)
 @TestExecutionListeners(listeners = {ScreenshotTaker.class, DependencyInjectionTestExecutionListener.class})
-public class AbstractTestIT extends AbstractTestNGSpringContextTests {
+public abstract class AbstractTestIT extends AbstractTestNGSpringContextTests {
 
 }
