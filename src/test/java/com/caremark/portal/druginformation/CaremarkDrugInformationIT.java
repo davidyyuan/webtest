@@ -2,6 +2,9 @@ package com.caremark.portal.druginformation;
 
 import static org.testng.AssertJUnit.assertTrue;
 import org.testng.annotations.Test;
+
+import com.caremark.portal.AbstractTestIT;
+
 import org.testng.annotations.BeforeMethod;
 import java.net.URI;
 import java.util.concurrent.Executors;
@@ -13,6 +16,8 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
 //import swb.ch15pageflow.pages.BookstoreHomepage;
@@ -20,9 +25,9 @@ import swb.framework.Browser;
 import swb.framework.BrowserConfig;
 import swb.framework.BrowserRunner;
 import swb.framework.Element;
+import swb.framework.ScreenshotTaker;
 
-@ContextConfiguration(classes = BrowserConfig.class)
-public class CaremarkDrugInformationIT extends AbstractTestNGSpringContextTests {
+public class CaremarkDrugInformationIT extends AbstractTestIT {
 
 	private final static Logger logger = LoggerFactory.getLogger(CaremarkDrugInformationIT.class);
 
