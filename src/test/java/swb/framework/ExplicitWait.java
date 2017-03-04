@@ -11,7 +11,10 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 public interface ExplicitWait extends SearchScope {
-
+	int TIMEOUT = 180;
+	int POLLING_INTERVAL = 1000;
+	
+	
     default Element await(Supplier<By> by) {
         return await((SearchScope e) -> e.findElement(by));
     }
@@ -22,8 +25,8 @@ public interface ExplicitWait extends SearchScope {
 
     default <T> T await(Function<SearchScope, T> function) {
         return new FluentWait<>(this)
-            .withTimeout(1, SECONDS)
-            .pollingEvery(10, MILLISECONDS)
+            .withTimeout(TIMEOUT, SECONDS)
+            .pollingEvery(POLLING_INTERVAL, MILLISECONDS)
             .ignoring(Exception.class)
             .until(
                 (SearchScope where) -> function.apply(where)

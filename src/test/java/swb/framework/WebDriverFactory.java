@@ -12,8 +12,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import com.caremark.portal.poc.drivers.ChromeDriverBinarySupplier;
-import com.caremark.portal.poc.drivers.FirefoxDriverBinarySupplier;
+import swb.framework.drivers.ChromeDriverBinarySupplier;
+import swb.framework.drivers.FirefoxDriverBinarySupplier;
 
 import java.io.IOException;
 import java.net.URI;
